@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome To My Orbit</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./ressource/css/style.css" />
+  </head>
+  <body>
+    <div class="main-scroller">
+      <div id="particles-js"></div>
+      <section class="full-screen" id="home">
+        <div id="moon-3d"></div>
+        <div class="content-box">
+          <div class="hero-content reveal">
+            <h2 class="typewrap">
+              <span id="typed-text"></span>
+              <span class="cursor"></span>
+            </h2>
+            <h1>Welcome To <span>My Orbit</span></h1>
+          </div>
+        </div>
+      </section>
+      <section class="full-screen" id="about">
+        <div class="content-box">
+          <div class="about-flex">
+            <div class="profile-img-container reveal">
+              <img
+                src="./ressource/img/profile.png"
+                alt="Profile Picture"
+                class="profile-img"
+              />
+            </div>
+            <div class="about-text reveal">
+              <h2>Who's Flying This Ship</h2>
+              <p>
+                A developer steadily leveling up from core principles to
+                advanced concepts, with a sharp focus on modern web development.
+                JavaScript is the main arena diving into logic, front-end
+                architecture, and building systems that stay scalable,
+                efficient, and easy to maintain.
+              </p>
+              <p>
+                Naturally drawn to visual tech, interactive effects, and
+                experiences that feel alive on the screen. UI/UX exploration
+                often leans toward subtle space inspired aesthetics clean,
+                atmospheric, and slightly otherworldly.
+              </p>
+              <p>
+                Constantly pushing for cleaner, smarter, and more efficient
+                solutions. Open to collaboration on projects that call for
+                precision, creativity, and a mindset built for exploring beyond
+                the usual orbit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="full-screen contact" id="contact">
+        <div class="content-box">
+          <div class="contact-wrapper reveal">
+            <h2>Send Transmission</h2>
+            <p>Transmit a message anytime questions or just a friendly ping.</p>
+            <a href="mailto:muhammadashfa2006@gmail.com" class="email-link"
+              >muhammadashfa2006@gmail.com</a
+            >
+            <div class="social-icons">
+              <a href="#" class="social-btn"
+                ><i class="fa-solid fa-envelope"></i
+              ></a>
+              <a href="#" class="social-btn"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a href="#" class="social-btn"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="#" class="social-btn"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="social-btn"
+                ><i class="fa-brands fa-discord"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./ressource/img/moon.png"
+          alt="Moon Bottom"
+          class="moon-bottom"
+        />
+      </section>
+    </div>
+
+    <script>
+      const text = "Hello Crew";
+      const el = document.getElementById("typed-text");
+      let i = 0;
+      let mode = "type";
+      const typeSpeed = 90;
+      const eraseSpeed = 50;
+      const pauseAfterType = 1500;
+      const pauseAfterErase = 300;
+
+      function step() {
+        if (mode === "type") {
+          el.textContent = text.slice(0, i + 1);
+          i++;
+          if (i === text.length) {
+            mode = "pauseType";
+            setTimeout(() => (mode = "erase"), pauseAfterType);
+          }
+          setTimeout(step, typeSpeed);
+        } else if (mode === "erase") {
+          el.textContent = text.slice(0, i - 1);
+          i--;
+          if (i === 0) {
+            mode = "pauseErase";
+            setTimeout(() => (mode = "type"), pauseAfterErase);
+          }
+          setTimeout(step, eraseSpeed);
+        } else {
+          setTimeout(step, 100);
+        }
+      }
+
+      step();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+
+    <script src="./index.js"></script>
+
+    <script type="module" src="./moon.js"></script>
+  </body>
+</html>
