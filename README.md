@@ -124,7 +124,7 @@ particles: {
 
 ## 🌐 Live Demo
 
-[View Live Portfolio](https://yourusername.github.io/my-orbit-portfolio)
+[View Live Portfolio](https://just-asf.github.io/new-portofolio/)
 
 ## 📚 Learning Resources
 
@@ -178,9 +178,9 @@ Contributions are welcome! Feel free to:
 **Muhammad Ashfa**
 
 - 📧 Email: [muhammadashfa2006@gmail.com](mailto:muhammadashfa2006@gmail.com)
-- 🐙 GitHub: [@yourusername](https://github.com/yourusername)
-- 💼 LinkedIn: [@yourprofile](https://linkedin.com/in/yourprofile)
-- 📱 Instagram: [@yourprofile](https://instagram.com/yourprofile)
+- 🐙 GitHub: [just-asf](https://github.com/just-asf/just-asf)
+- 💼 LinkedIn: [Muhammad Ashfa](https://www.linkedin.com/in/muhammad-ashfa-2248772a5?utm_source=share_via&utm_content=profile&utm_medium=member_android)
+- 📱 Instagram: [@just.asf](https://www.instagram.com/just.asf?igsh=dWtrOHM3aDB6NDl1)
 
 ## 🙏 Acknowledgments
 
